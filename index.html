@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Command Handler</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div class="feedbacktitle mt-4 mx-auto">
+            <p>Feedback:</p>
+            <p class="feedback font-semibold text-lg" id="feedback"></p>
+        </div>
+        <iframe id="iframe" class="iframe" src="recognizer.html"></iframe>
+    </div>
+    
+    <script>
+        window.addEventListener("message", (event) => {
+            console.log(event)
+            if (event.type === 'message') {
+                document.getElementById('feedback').textContent = event.data.message;
+                document.getElementById('feedback').style.color = event.data.color;
+            }
+        }, false);
+    </script>
+</body>
+
+</html>

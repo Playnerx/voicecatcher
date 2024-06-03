@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestore dei comandi vocali</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div class="text-center">
+            <h1 class="title text-4xl text-white py-4">Riconoscimento delle segreterie telefoniche</h1>
+        </div>
+
+        <div class="max-w-xl mx-auto">
+            <p class="sub-title text-xl mt-14">Consenti l'accesso al microfono per avviare la registrazione.</p>
+            <canvas class="canvas w-full border border-gray-400 mt-8" id="c" width="1000" height="300"></canvas>
+            <div>
+                <p class="output text-lg mt-4"><em>In attesa di ascolto.</em></p>
+                <p class="feedback font-semibold text-lg"></p>
+            </div>
+        </div>
+
+        <div class="footer mt-20">
+            <img src="assets/logox2.png" class="w-50 h-14 image">
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
